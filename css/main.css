@@ -1,0 +1,410 @@
+/* ===== HARRYZEDHUGHES.COM ARCHIVE STYLES ===== */
+
+:root {
+    --archive-cream: #FDFCF8;
+    --archive-white: #FFFFFF;
+    --archive-gray-light: #F5F5F5;
+    --archive-gray-medium: #E0E0E0;
+    --archive-gray-dark: #8E8E8E;
+    --archive-brown-light: #D4C4B0;
+    --archive-brown-medium: #A0956B;
+    --archive-brown-dark: #6B5B3F;
+    --archive-text-primary: #2C2C2C;
+    --archive-text-secondary: #5A5A5A;
+    --archive-text-light: #8A8A8A;
+    --archive-accent: #8B4513;
+    --archive-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --archive-shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: var(--archive-cream);
+    color: var(--archive-text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--archive-text-primary);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--archive-text-primary);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--archive-text-secondary);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--archive-text-secondary);
+}
+
+a {
+    color: var(--archive-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--archive-brown-dark);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== LAYOUT STRUCTURE ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.archive-header {
+    background: var(--archive-white);
+    border-bottom: 2px solid var(--archive-gray-medium);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--archive-shadow-light);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.archive-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--archive-text-primary);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.current-site-link {
+    background: var(--archive-accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease;
+}
+
+.current-site-link:hover {
+    background: var(--archive-brown-dark);
+    text-decoration: none;
+}
+
+/* ===== NAVIGATION ===== */
+.archive-nav {
+    background: var(--archive-gray-light);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--archive-gray-medium);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    color: var(--archive-text-secondary);
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background: var(--archive-brown-light);
+    color: var(--archive-text-primary);
+    text-decoration: none;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    flex: 1;
+    padding: 3rem 0;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    text-align: center;
+    background: var(--archive-white);
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    box-shadow: var(--archive-shadow-medium);
+    margin-bottom: 3rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--archive-text-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--archive-text-secondary);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--archive-text-secondary);
+}
+
+/* ===== GRID LAYOUTS ===== */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.archive-card {
+    background: var(--archive-white);
+    border: 1px solid var(--archive-gray-medium);
+    border-radius: 6px;
+    padding: 2rem;
+    box-shadow: var(--archive-shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--archive-shadow-medium);
+}
+
+.archive-card h3 {
+    color: var(--archive-accent);
+    margin-bottom: 1rem;
+}
+
+.archive-card p {
+    color: var(--archive-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.archive-card a {
+    font-weight: bold;
+    color: var(--archive-accent);
+}
+
+/* ===== TIMELINE STYLES ===== */
+.timeline-period {
+    background: var(--archive-white);
+    border-left: 4px solid var(--archive-accent);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0 6px 6px 0;
+    box-shadow: var(--archive-shadow-light);
+}
+
+.timeline-period h3 {
+    color: var(--archive-accent);
+    margin-bottom: 1rem;
+}
+
+.timeline-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.timeline-highlight {
+    background: var(--archive-gray-light);
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.timeline-highlight img {
+    margin: 0 auto 0.5rem;
+    border-radius: 4px;
+}
+
+.timeline-highlight h4 {
+    font-size: 0.9rem;
+    color: var(--archive-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--archive-accent);
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--archive-brown-dark);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: var(--archive-gray-dark);
+}
+
+.btn-secondary:hover {
+    background: var(--archive-text-primary);
+}
+
+/* ===== FOOTER ===== */
+.archive-footer {
+    background: var(--archive-text-primary);
+    color: var(--archive-gray-light);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--archive-gray-light);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .archive-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .timeline-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 0.25rem;
+    }
+    
+    .nav-menu li a {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .archive-card {
+        padding: 1.5rem;
+    }
+    
+    .timeline-period {
+        padding: 1.5rem;
+    }
+}
